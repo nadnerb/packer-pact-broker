@@ -6,8 +6,7 @@
     "aws_source_ami": "ami-69631053",
     "aws_instance_type": "t2.micro",
     "ami_name_prefix": "pact_broker",
-    "ruby_version": "2.2.2",
-    "pact_broker_version": "1.8.0"
+    "ruby_version": "2.2.2"
   },
   "builders": [{
     "type": "amazon-ebs",
@@ -29,8 +28,7 @@
       "type": "shell",
       "script": "scripts/pact.sh",
       "environment_vars": [
-            "RUBY_VERSION={{user `ruby_version`}}",
-            "PACT_VERSION={{user `pact_broker_version`}}"
+            "RUBY_VERSION={{user `ruby_version`}}"
         ],
       "execute_command": "chmod +x {{ .Path }}; {{ .Vars }} sudo -E '{{ .Path }}'"
     }

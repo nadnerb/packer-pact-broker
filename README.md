@@ -3,7 +3,7 @@ Pact broker AWS AMI with Packer
 
 Install [Packer](https://www.packer.io/) and add it to your PATH.
 
-Create your consul AMI in AWS, using your access and secret keys.
+Create your pact broker AMI in AWS, using your access and secret keys.
 
 ```
 packer build \
@@ -23,7 +23,7 @@ Extra variables exposed:
 * aws_region (defaults to `ap-southeast-2`)
 * aws_instance_type (defaults to `t2.micro`)
 * ami_name_prefix (defaults to `pact_broker`)
-* pact_broker_version (defaults to `1.8.0`)
+* ruby_version (defaults to `2.2.0`)
 
 ###Troubleshooting
 
